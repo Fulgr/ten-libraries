@@ -1,8 +1,6 @@
 import socket
 
 def request(data):
-    data = data[8:]
-    data = data[:-3]
     data = data.split(',')
     host = data[0]
     port = int(data[1])

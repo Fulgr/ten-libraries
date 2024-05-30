@@ -1,9 +1,9 @@
 import sys
 import re
 from collections import deque
-from lib import sockets
+from lib import sockets, filemanager
 
-libraries = [sockets]
+libraries = [sockets, filemanager]
 
 filename = sys.argv[1]
 printq = False
@@ -421,9 +421,9 @@ while (i < len(contents)):
     else:
         r = False
         for lib in libraries:
-            r = lib.exec(contents[i], q)
-            q.appendleft(r)
+            r = lib.exec(contents[i], q[0])
             if (r):
+                q.appendleft(r)
                 break
         if not (r):
             try:
