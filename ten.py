@@ -1,6 +1,9 @@
 import sys
 import re
 from collections import deque
+from plugins import sockets
+
+plugins = [sockets]
 
 filename = sys.argv[1]
 printq = False
@@ -289,6 +292,7 @@ def exec(s):
                 exec(itr)
                 cont = boolexpr(cond)
         else:
+
             try:
                 q.appendleft(int(s[i]))
             except:
@@ -415,10 +419,17 @@ while (i < len(contents)):
             exec(itr)
             cont = boolexpr(cond)
     else:
-        try:
-            q.appendleft(int(contents[i]))
-        except:
-            pass
+        r = False
+        for plugin in plugins:
+            r = plugin.exec(contents[i], q)
+            q.appendleft(r)
+            if (r):
+                break
+        if not (r):
+            try:
+                q.appendleft(int(contents[i]))
+            except:
+                pass
     i += 1
 
 
