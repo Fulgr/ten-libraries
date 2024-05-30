@@ -1,9 +1,9 @@
 import sys
 import re
 from collections import deque
-from lib import sockets, filemanager
+from lib import sockets, filemanager, ossystem
 
-libraries = [sockets, filemanager]
+libraries = [sockets, filemanager, ossystem]
 
 filename = sys.argv[1]
 printq = False
