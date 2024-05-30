@@ -1,0 +1,25 @@
+{
+  "name": "ten",
+  "displayName": "TEN",
+  "description": "TEN programming language syntax support",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.89.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "ten",
+      "aliases": ["TEN", "ten"],
+      "extensions": [".ten"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "ten",
+      "scopeName": "source.ten",
+      "path": "./syntaxes/ten.tmLanguage.json"
+    }]
+  }
+}
