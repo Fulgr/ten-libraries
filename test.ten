@@ -1,0 +1,31 @@
+"Welcome to calculator in TEN!';
+"What should we call you?';
+#|s$name:
+"name'^"'=<
+    "Well you should atleast try to get a name, no?';
+    0|i$a:
+    {
+        ,
+        "name'^"'=,
+        1"a'^+"a':,
+        #|s$name:
+    }
+>
+"Welcome,';
+0|i$a:
+"name'^;
+{
+    ,
+    `,
+    1"a'^+"a':,
+    "What action would you like to perform?';
+    "1. Plus';
+    "2. Minus';
+    "3. Multiplication';
+    "4. Division';
+    #|s$choice:
+    "choice'^"1'=<##+;>
+    "choice'^"2'=<##-;>
+    "choice'^"3'=<##*;>
+    "choice'^"4'=<##/;>
+}
