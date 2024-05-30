@@ -1,9 +1,9 @@
 import sys
 import re
 from collections import deque
-from plugins import sockets
+from lib import sockets
 
-plugins = [sockets]
+libraries = [sockets]
 
 filename = sys.argv[1]
 printq = False
@@ -420,8 +420,8 @@ while (i < len(contents)):
             cont = boolexpr(cond)
     else:
         r = False
-        for plugin in plugins:
-            r = plugin.exec(contents[i], q)
+        for lib in libraries:
+            r = lib.exec(contents[i], q)
             q.appendleft(r)
             if (r):
                 break
