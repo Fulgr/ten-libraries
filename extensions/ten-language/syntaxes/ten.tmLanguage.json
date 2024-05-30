@@ -59,7 +59,7 @@
 		},
 		"variables": {
 			"name": "variable.other.ten",
-			"match": "\\$[a-zA-Z_][a-zA-Z0-9_]*"
+			"match": "\\$[a-zA-Z_][a-zA-Z0-9_]*|\\^"
 		},
 		"types": {
 			"name": "storage.type.ten",
