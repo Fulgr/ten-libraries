@@ -1,4 +1,4 @@
-"google.com,80,GET / HTTP/1.1%Host: google.com%%'q|s$response:
+"google.com,80,GET / HTTP/1.1%Host: www.google.com%%'q|s$response:
 @ That might look a bit weird so allow me to explain %
 @ Firstly, the function of the plugin is called q %
 @ q takes 3 parameters, the host, the port, and the query %
